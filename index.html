@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#071b16">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="369 BARAKA">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>369 BARAKA</title>
+<style>
+:root{--bg:#071b16;--panel:#102820;--panel2:#153329;--gold:#d9b76a;--cream:#f4efdf;--muted:#a8b8ad;--green:#70c49a;--line:#28483c;--red:#e5a28f}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#12372a 0%,var(--bg) 52%);color:var(--cream);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:env(safe-area-inset-top) 0 calc(84px + env(safe-area-inset-bottom));min-height:100vh}
+button,input,textarea{font:inherit}button{cursor:pointer}.app{max-width:560px;margin:auto;padding:18px 16px 28px}.top{display:flex;justify-content:space-between;align-items:center;margin:8px 0 22px}.brand{font-weight:800;letter-spacing:3px;color:var(--gold);font-size:20px}.sub{color:var(--muted);font-size:11px;letter-spacing:1.7px;margin-top:4px}.pill{border:1px solid var(--line);border-radius:99px;padding:8px 11px;color:var(--gold);font-size:12px}
+h1{font-size:28px;line-height:1.15;margin:4px 0 8px}h2{font-size:18px;margin:0 0 14px}h3{font-size:15px;margin:0 0 8px}.muted{color:var(--muted)}.small{font-size:12px;line-height:1.5}.gold{color:var(--gold)}
+.card{background:linear-gradient(145deg,rgba(21,51,41,.97),rgba(12,35,28,.97));border:1px solid var(--line);border-radius:20px;padding:17px;margin:13px 0;box-shadow:0 12px 35px #0002}.hero{padding:21px;background:linear-gradient(135deg,#183d2e,#0d251d);border-color:#42634b}.eyebrow{font-size:11px;letter-spacing:1.8px;color:var(--gold);text-transform:uppercase}.target{font-size:36px;font-weight:750;letter-spacing:-1px;margin:7px 0}.bar{height:8px;background:#29483b;border-radius:20px;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,#8bc89b,var(--gold));border-radius:20px;width:0%;transition:width .2s}.row{display:flex;align-items:center;justify-content:space-between;gap:12px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.stat{background:#0b211a;border:1px solid var(--line);border-radius:14px;padding:12px}.stat strong{display:block;font-size:21px;color:var(--gold)}.stat span{font-size:11px;color:var(--muted)}
+.btn{border:0;border-radius:13px;background:var(--gold);color:#1c261b;font-weight:700;padding:12px 15px}.btn.secondary{background:#1b3b2e;color:var(--cream);border:1px solid var(--line)}.btn.ghost{background:transparent;color:var(--gold);border:1px solid var(--line)}.btn:disabled{opacity:.35}
+.tabs{position:fixed;bottom:0;left:0;right:0;z-index:5;background:#071b16ed;backdrop-filter:blur(16px);border-top:1px solid var(--line);display:flex;justify-content:center;padding:9px 8px calc(9px + env(safe-area-inset-bottom));gap:3px}.tab{flex:1;max-width:115px;background:none;border:0;color:var(--muted);font-size:10px;padding:6px 2px;border-radius:12px}.tab b{display:block;font-size:19px;font-weight:500;margin-bottom:3px}.tab.active{color:var(--gold);background:#163327}
+.view{display:none}.view.active{display:block}.check{display:flex;align-items:flex-start;gap:11px;padding:12px 0;border-bottom:1px solid #294439}.check:last-child{border:0}.check input{accent-color:var(--gold);width:21px;height:21px;margin:1px 0 0;flex:none}.check label{line-height:1.35;flex:1}.check.done label{color:var(--muted);text-decoration:line-through}.session{border:1px solid var(--line);border-radius:15px;padding:13px;margin:10px 0;background:#0b211a}.session .num{font-size:25px;color:var(--gold);font-weight:800}.session textarea,textarea,input[type=number],input[type=date]{width:100%;background:#091e17;color:var(--cream);border:1px solid var(--line);border-radius:11px;padding:11px;outline:none}.session textarea{min-height:70px;resize:vertical}.dua{font-size:22px;line-height:1.8;text-align:center;color:#f5dfaa;direction:rtl}.quote{font-size:16px;line-height:1.65;text-align:center}.daylist{display:grid;grid-template-columns:repeat(7,1fr);gap:7px}.day{aspect-ratio:1;border:1px solid var(--line);border-radius:11px;background:#0b211a;color:var(--muted);font-weight:650}.day.current{border:2px solid var(--gold);color:var(--gold)}.day.complete{background:#234d39;color:#d6f0dd;border-color:#4f8967}.day:disabled{opacity:.4}.field{margin:11px 0}.field label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}.navtitle{font-size:25px;margin:12px 0 4px}.notice{background:#342c19;border:1px solid #77643a;color:#ead9a9;padding:12px;border-radius:13px;font-size:12px;line-height:1.5}.arabic-note{font-size:12px;color:var(--muted);text-align:center;margin-top:7px}
+@media(min-width:600px){.app{padding-top:28px}.tabs{bottom:16px;left:50%;transform:translateX(-50%);width:min(540px,calc(100% - 32px));border:1px solid var(--line);border-radius:18px;padding-bottom:9px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top"><div><div class="brand">369 BARAKA</div><div class="sub">INTENTION · DISCIPLINE · BARAKA</div></div><div class="pill" id="datePill">33 JOURS</div></header>
+
+<section class="view active" id="home">
+  <div class="hero card">
+    <div class="eyebrow">Ton intention financière</div>
+    <h1>Construire une abondance<br>licite et durable.</h1>
+    <div class="target">50 000 <span class="gold">MAD</span><span class="small muted"> / mois</span></div>
+    <div class="row small muted"><span>Progression du programme</span><b id="overallText">0 / 33 jours</b></div>
+    <div class="bar" style="margin-top:9px"><div class="fill" id="overallBar"></div></div>
+    <p class="small muted" style="margin:14px 0 0">Avec la permission d'Allah, par des efforts honnêtes, des choix réfléchis et des revenus halal.</p>
+  </div>
+  <div class="row"><h2>Aujourd'hui</h2><span class="pill" id="todayLabel">Jour 1 / 33</span></div>
+  <div class="grid">
+    <div class="stat"><strong id="todayChecks">0/5</strong><span>Habitudes</span></div>
+    <div class="stat"><strong id="streak">0</strong><span>Jours complets</span></div>
+    <div class="stat"><strong id="incomeTotal">0</strong><span>MAD suivis</span></div>
+  </div>
+  <div class="card">
+    <div class="row"><h2>Programme du jour</h2><button class="btn ghost" onclick="show('routine')">Ouvrir</button></div>
+    <div class="check"><span>🌅</span><label>Matin : écrire ton intention 3 fois</label></div>
+    <div class="check"><span>☀️</span><label>Après-midi : écrire ton intention 6 fois</label></div>
+    <div class="check"><span>🌙</span><label>Soir : écrire ton intention 9 fois</label></div>
+    <div class="check"><span>💼</span><label>Une action concrète pour développer tes revenus</label></div>
+  </div>
+  <div class="notice">La méthode 369 est ici un outil personnel de concentration, pas une pratique religieuse prescrite ni une garantie de richesse. Les résultats dépendent notamment des décisions, du marché et des efforts.</div>
+</section>
+
+<section class="view" id="routine">
+  <div class="navtitle">Ma routine 369</div><p class="muted small">Répète la même intention aux trois moments de la journée.</p>
+  <div class="card">
+    <div class="eyebrow">Ton intention à recopier</div>
+    <p class="quote" id="affirmation">« Par la volonté d'Allah, je développe plusieurs sources de revenus halal et durables. Je travaille avec discipline, intelligence et patience. Allah m'accorde Sa bénédiction dans mes efforts et me permet d'atteindre 50 000 MAD par mois, afin de vivre dignement, de protéger ma famille, d'aider les autres et de faire le bien. »</p>
+    <button class="btn secondary" style="width:100%" onclick="copyAffirmation()">Copier mon intention</button>
+  </div>
+  <div class="session"><div class="row"><div><div class="eyebrow">🌅 Matin</div><h3>Écris ton intention</h3></div><div class="num">× 3</div></div><textarea id="morning" placeholder="Tu peux noter ici ton intention ou ton ressenti…"></textarea><label class="check"><input type="checkbox" data-task="0"><span>Session du matin terminée</span></label></div>
+  <div class="session"><div class="row"><div><div class="eyebrow">☀️ Après-midi</div><h3>Recentre ton attention</h3></div><div class="num">× 6</div></div><textarea id="afternoon" placeholder="Quelle opportunité ou action aujourd'hui ?"></textarea><label class="check"><input type="checkbox" data-task="1"><span>Session de l'après-midi terminée</span></label></div>
+  <div class="session"><div class="row"><div><div class="eyebrow">🌙 Soir</div><h3>Fais le bilan</h3></div><div class="num">× 9</div></div><textarea id="evening" placeholder="Ce dont je suis reconnaissant aujourd'hui…"></textarea><label class="check"><input type="checkbox" data-task="2"><span>Session du soir terminée</span></label></div>
+  <div class="card"><h2>Mes habitudes quotidiennes</h2><div id="habitChecks"></div></div>
+</section>
+
+<section class="view" id="journey">
+  <div class="navtitle">Mes 33 jours</div><p class="muted small">Choisis un jour pour consulter et compléter son suivi. Les données restent sur cet appareil.</p>
+  <div class="card"><div class="row"><button class="btn secondary" onclick="shiftDay(-1)">‹</button><h2 id="journeyTitle">Jour 1</h2><button class="btn secondary" onclick="shiftDay(1)">›</button></div><div class="daylist" id="dayGrid"></div></div>
+  <div class="card"><h2>Étape du programme</h2><div id="phaseTitle" class="gold"></div><p class="small muted" id="phaseDesc"></p><div class="field"><label>Mon action concrète du jour</label><textarea id="actionNote" placeholder="Ex. contacter 5 prospects, publier une offre, étudier une marge…"></textarea></div><div class="field"><label>Mon bilan / ce que j'ai appris</label><textarea id="reflection" placeholder="Note tes progrès, difficultés ou idées…"></textarea></div><button class="btn" style="width:100%" onclick="saveNotes()">Enregistrer le bilan</button></div>
+</section>
+
+<section class="view" id="finance">
+  <div class="navtitle">Mes revenus</div><p class="muted small">Suis tes résultats réels, séparément de ton objectif. Saisis des montants encaissés, pas des prévisions.</p>
+  <div class="hero card"><div class="eyebrow">Objectif mensuel</div><div class="target">50 000 <span class="gold">MAD</span></div><div class="row small muted"><span>Revenus enregistrés</span><b id="financePercent">0%</b></div><div class="bar" style="margin-top:9px"><div class="fill" id="financeBar"></div></div><h2 id="financeAmount" style="margin:12px 0 0">0 MAD</h2></div>
+  <div class="card"><h2>Ajouter un revenu</h2><div class="field"><label>Source</label><input id="incomeSource" placeholder="Ex. prestation informatique"></div><div class="field"><label>Montant encaissé (MAD)</label><input id="incomeValue" type="number" min="0" step="0.01" placeholder="0"></div><button class="btn" style="width:100%" onclick="addIncome()">Ajouter le revenu</button><div id="incomeList" class="small muted" style="margin-top:14px">Aucun revenu enregistré.</div></div>
+  <div class="card"><h2>Répartition cible (indicative)</h2><div class="row"><span>Activité principale</span><b>20 000 MAD</b></div><div class="bar" style="margin:7px 0 14px"><div class="fill" style="width:40%"></div></div><div class="row"><span>E-commerce</span><b>20 000 MAD</b></div><div class="bar" style="margin:7px 0 14px"><div class="fill" style="width:40%"></div></div><div class="row"><span>Activité digitale</span><b>10 000 MAD</b></div><div class="bar" style="margin:7px 0 0"><div class="fill" style="width:20%"></div></div><p class="small muted">Ce sont des objectifs hypothétiques, pas des revenus garantis. Distingue chiffre d'affaires, bénéfice net et revenu personnel.</p></div>
+</section>
+
+<section class="view" id="duas">
+  <div class="navtitle">Dou'as & gratitude</div><p class="muted small">Des invocations pour demander le bien, une subsistance licite et la bénédiction.</p>
+  <div class="card"><div class="dua">رَبِّ إِنِّي لِمَا أَنْزَلْتَ إِلَيَّ مِنْ خَيْرٍ فَقِيرٌ</div><div class="arabic-note">Rabbi innī limā anzalta ilayya min khayrin faqīr.</div><p class="quote">« Seigneur, j'ai grand besoin de tout bien que Tu feras descendre vers moi. »</p><p class="small muted">Sourate Al-Qasas, 28:24.</p></div>
+  <div class="card"><div class="dua">اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا وَرِزْقًا طَيِّبًا وَعَمَلًا مُتَقَبَّلًا</div><div class="arabic-note">Allahumma innī as'aluka ilman nāfi'an, wa rizqan tayyiban, wa 'amalan mutaqabbalan.</div><p class="quote">« Ô Allah, je Te demande un savoir utile, une bonne subsistance et des œuvres acceptées. »</p><p class="small muted">Invocation rapportée notamment par Ibn Majah.</p></div>
+  <div class="card"><div class="dua">اللَّهُمَّ اكْفِنِي بِحَلَالِكَ عَنْ حَرَامِكَ وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ</div><div class="arabic-note">Allahummakfinī bihalālika 'an harāmika, wa aghninī bifadlika 'amman siwāk.</div><p class="quote">« Ô Allah, suffis-moi par ce que Tu as rendu licite plutôt que par ce que Tu as interdit, et enrichis-moi par Ta grâce afin que je n'aie besoin de personne d'autre que Toi. »</p><p class="small muted">Rapportée notamment par At-Tirmidhi.</p></div>
+  <div class="card"><h2>Ma gratitude du jour</h2><textarea id="gratitude" placeholder="Aujourd'hui, je remercie Allah pour…"></textarea><button class="btn secondary" style="width:100%;margin-top:10px" onclick="saveGratitude()">Enregistrer</button></div>
+  <div class="notice">Les dou'as peuvent être récitées librement. Aucun nombre particulier de répétitions ne garantit un résultat. Le tawakkul s'accompagne des moyens licites et de l'effort.</div>
+</section>
+
+<section class="view" id="settings">
+  <div class="navtitle">Paramètres</div>
+  <div class="card"><h2>Démarrer mon programme</h2><p class="small muted">Choisis la date de départ. Le jour 1 correspondra à cette date.</p><div class="field"><label>Date de départ</label><input type="date" id="startDate"></div><button class="btn" style="width:100%" onclick="setStart()">Enregistrer la date</button></div>
+  <div class="card"><h2>Données de l'application</h2><p class="small muted">Tes notes, cases cochées et revenus sont enregistrés localement dans le navigateur de cet iPhone. Ils ne sont pas synchronisés entre appareils.</p><button class="btn secondary" style="width:100%" onclick="exportData()">Exporter mes données (JSON)</button><button class="btn ghost" style="width:100%;margin-top:9px" onclick="resetData()">Réinitialiser toutes les données</button></div>
+  <div class="card"><h2>Installation sur iPhone</h2><p class="small">1. Ouvre le lien hébergé dans Safari.<br>2. Appuie sur <b>Partager</b>.<br>3. Choisis <b>Sur l'écran d'accueil</b>.<br>4. Active <b>Ouvrir comme app web</b> si l'option apparaît, puis touche Ajouter.</p></div>
+  <p class="small muted" style="text-align:center">369 BARAKA · Un outil de discipline personnelle, pas une promesse de richesse.</p>
+</section>
+</div>
+
+<nav class="tabs">
+<button class="tab active" data-view="home"><b>⌂</b>Accueil</button>
+<button class="tab" data-view="routine"><b>✍</b>Routine</button>
+<button class="tab" data-view="journey"><b>☾</b>33 jours</button>
+<button class="tab" data-view="finance"><b>◇</b>Revenus</button>
+<button class="tab" data-view="duas"><b>☪</b>Dou'as</button>
+</nav>
+<script>
+const KEY='369baraka-v1';
+const tasks=['Session du matin (3 fois)','Session de l’après-midi (6 fois)','Session du soir (9 fois)','Action concrète pour développer mes revenus','Invocation et gratitude'];
+const phases=[
+[1,7,'Préparation et intention','Fais le bilan de tes compétences, choisis deux activités prioritaires, identifie les besoins des clients et fixe un budget de départ.'],
+[8,14,'Construction','Prépare tes offres, identifie fournisseurs et partenaires, calcule les coûts et les marges, crée une présence professionnelle.'],
+[15,21,'Passage à l’action','Contacte des prospects, publie du contenu, présente tes offres, cherche tes premiers clients et note recettes et dépenses.'],
+[22,27,'Optimisation','Analyse les résultats, améliore tes offres, fidélise les clients et réinvestis prudemment les bénéfices.'],
+[28,33,'Consolidation','Fais ton bilan financier, évalue les revenus réels et fixe tes objectifs pour les 90 prochains jours.']];
+let data=load(), selectedDay=1;
+function load(){try{return JSON.parse(localStorage.getItem(KEY))||{start:new Date().toISOString().slice(0,10),days:{},incomes:[],gratitude:''}}catch(e){return {start:new Date().toISOString().slice(0,10),days:{},incomes:[],gratitude:''}}}
+function save(){localStorage.setItem(KEY,JSON.stringify(data));render()}
+function dayData(n){return data.days[n]||(data.days[n]={checks:[false,false,false,false,false],notes:'',reflection:'',morning:'',afternoon:'',evening:''})}
+function currentDay(){let s=new Date(data.start+'T00:00:00'),now=new Date();now.setHours(0,0,0,0);return Math.max(1,Math.min(33,Math.floor((now-s)/86400000)+1))}
+function show(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===id));document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.view===id));if(id==='journey')renderJourney();if(id==='finance')renderFinance();window.scrollTo(0,0)}
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>show(t.dataset.view)));
+function render(){let complete=0;for(let i=1;i<=33;i++){if(dayData(i).checks.every(Boolean))complete++}let n=currentDay(),d=dayData(n),checked=d.checks.filter(Boolean).length;
+document.getElementById('overallText').textContent=complete+' / 33 jours';document.getElementById('overallBar').style.width=(complete/33*100)+'%';document.getElementById('todayLabel').textContent='Jour '+n+' / 33';document.getElementById('todayChecks').textContent=checked+'/5';document.getElementById('streak').textContent=complete;let sum=data.incomes.reduce((a,x)=>a+Number(x.value),0);document.getElementById('incomeTotal').textContent=Math.round(sum).toLocaleString('fr-FR');
+document.querySelectorAll('[data-task]').forEach(el=>{let i=+el.dataset.task;el.checked=!!d.checks[i];el.onchange=()=>{dayData(n).checks[i]=el.checked;save()}});document.getElementById('habitChecks').innerHTML=tasks.slice(3).map((t,j)=>`<label class="check ${d.checks[j+3]?'done':''}"><input type="checkbox" data-extra="${j+3}" ${d.checks[j+3]?'checked':''}><span>${t}</span></label>`).join('');
+document.querySelectorAll('[data-extra]').forEach(el=>el.onchange=()=>{d.checks[+el.dataset.extra]=el.checked;save()});
+['morning','afternoon','evening'].forEach(k=>{let el=document.getElementById(k);if(document.activeElement!==el)el.value=d[k]||'';el.oninput=()=>{d[k]=el.value;localStorage.setItem(KEY,JSON.stringify(data))}});
+document.getElementById('gratitude').value=data.gratitude||'';renderJourney();renderFinance()}
+function renderJourney(){let n=currentDay();document.getElementById('journeyTitle').textContent='Jour '+selectedDay;let grid=document.getElementById('dayGrid');grid.innerHTML='';for(let i=1;i<=33;i++){let b=document.createElement('button');b.className='day'+(i===selectedDay?' current':'')+(dayData(i).checks.every(Boolean)?' complete':'');b.textContent=i;b.onclick=()=>{selectedDay=i;renderJourney()};grid.appendChild(b)}let p=phases.find(x=>selectedDay>=x[0]&&selectedDay<=x[1]);document.getElementById('phaseTitle').textContent=p[2];document.getElementById('phaseDesc').textContent=p[3];document.getElementById('actionNote').value=dayData(selectedDay).notes||'';document.getElementById('reflection').value=dayData(selectedDay).reflection||''}
+function saveNotes(){let d=dayData(selectedDay);d.notes=document.getElementById('actionNote').value;d.reflection=document.getElementById('reflection').value;save();alert('Bilan enregistré.')}
+function shiftDay(v){selectedDay=Math.max(1,Math.min(33,selectedDay+v));renderJourney()}
+function renderFinance(){let sum=data.incomes.reduce((a,x)=>a+Number(x.value),0),pct=Math.min(100,sum/50000*100);document.getElementById('financeAmount').textContent=sum.toLocaleString('fr-FR',{maximumFractionDigits:2})+' MAD';document.getElementById('financePercent').textContent=Math.round(pct)+'%';document.getElementById('financeBar').style.width=pct+'%';document.getElementById('incomeList').innerHTML=data.incomes.length?data.incomes.map((x,i)=>`<div class="row" style="padding:8px 0;border-bottom:1px solid #294439"><span>${esc(x.source)}<br><small class="muted">${esc(x.date)}</small></span><b class="gold">${Number(x.value).toLocaleString('fr-FR')} MAD</b><button class="btn ghost" style="padding:5px 9px" onclick="deleteIncome(${i})">×</button></div>`).join(''):'Aucun revenu enregistré.'}
+function addIncome(){let source=document.getElementById('incomeSource').value.trim(),value=Number(document.getElementById('incomeValue').value);if(!source||!value||value<0){alert('Indique une source et un montant valide.');return}data.incomes.push({source,value,date:new Date().toLocaleDateString('fr-FR')});document.getElementById('incomeSource').value='';document.getElementById('incomeValue').value='';save()}
+function deleteIncome(i){data.incomes.splice(i,1);save()}
+function saveGratitude(){data.gratitude=document.getElementById('gratitude').value;save();alert('Gratitude enregistrée.')}
+function setStart(){let v=document.getElementById('startDate').value;if(!v)return;data.start=v;save();alert('Date de départ enregistrée.')}
+function copyAffirmation(){let t=document.getElementById('affirmation').innerText;navigator.clipboard?.writeText(t).then(()=>alert('Intention copiée.')).catch(()=>alert(t))}
+function exportData(){let blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='369-baraka-donnees.json';a.click();URL.revokeObjectURL(a.href)}
+function resetData(){if(confirm('Effacer toutes tes notes, cases cochées et revenus ?')){localStorage.removeItem(KEY);data=load();selectedDay=1;render()}}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+document.getElementById('startDate').value=data.start;
+document.getElementById('datePill').textContent=new Date().toLocaleDateString('fr-FR',{day:'numeric',month:'short'}).toUpperCase();
+if('serviceWorker' in navigator && location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
+render();
+</script>
+</body></html>

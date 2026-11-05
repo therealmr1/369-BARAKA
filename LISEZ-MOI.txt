@@ -1,0 +1,18 @@
+369 BARAKA — application web progressive
+
+CONTENU
+- index.html : application mobile
+- manifest.webmanifest : configuration PWA
+- sw.js : cache hors ligne
+- icon-192.png / icon-512.png : icônes
+
+INSTALLATION SUR IPHONE
+1. Héberger le contenu de ce dossier sur un hébergement HTTPS (par ex. GitHub Pages, Netlify ou Vercel).
+2. Ouvrir l'adresse publiée dans Safari sur l'iPhone.
+3. Toucher Partager > Sur l'écran d'accueil > Ajouter.
+4. Ouvrir depuis la nouvelle icône.
+
+IMPORTANT
+Un fichier ZIP seul ne peut pas être installé comme une app iOS. Une PWA doit être servie depuis une adresse HTTPS pour que Safari puisse l'ajouter à l'écran d'accueil et que le cache hors ligne fonctionne.
+Les données sont stockées localement dans le navigateur/appareil. Exporter régulièrement les données depuis Paramètres.
+Les notifications programmées ne sont pas incluses dans cette version.
